@@ -16,7 +16,7 @@ thumbnail_images = {
     'Normal Sample': 'samples/Normal-sample1.jpeg'
 }
 
-st.title("Shaurya - Chest X-Ray Diagnosis App")
+st.title("Chest X-Ray Diagnosis App")
 
 # Sidebar - Thumbnail selection
 st.sidebar.title('Sample X-Rays')
@@ -26,7 +26,7 @@ selected_thumbnail = st.sidebar.radio("Choose a sample x-ray:", list(thumbnail_i
 st.sidebar.image(thumbnail_images[selected_thumbnail], width=150, caption=selected_thumbnail)
 
 # Handle file upload or use the selected thumbnail
-uploaded_file = st.file_uploader("Choose an x-ray image...", type=['png', 'jpg', 'jpeg'])
+uploaded_file = st.file_uploader("Choose any x-ray image...", type=['png', 'jpg', 'jpeg'])
 if not uploaded_file:
     uploaded_file = thumbnail_images[selected_thumbnail]
 

@@ -21,11 +21,6 @@ st.write("**Streamlit version:**", st.__version__)
 st.write("**NumPy version:**", numpy.__version__)
 st.write("**TensorFlow version:**", tf.__version__)
 
-# Display versions of all loaded modules
-st.write("### Loaded Modules and Versions:")
-for module_name, module in sys.modules.items():
-    if hasattr(module, '__version__'):
-        st.write(f"**{module_name} version:** {module.__version__}")
 
 # Load your model
 model = load_model('chest_xray.h5')
